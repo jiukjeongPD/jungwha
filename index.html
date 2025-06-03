@@ -4,36 +4,38 @@
   <meta charset="utf-8">
   <title>네이버 지도 - 더채플엣청담</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
     #map {
       width: 100%;
-      max-width: 600px;
-      height: 400px;
-      margin: 40px auto;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    body {
-      background: #fff;
-      font-family: sans-serif;
+      height: 100%;
     }
   </style>
-  <!-- 네이버 지도 API 로드 -->
+  <!-- 네이버 지도 SDK 로드 (지도용 Client ID를 여기에 삽입하세요) -->
   <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ocoawx7iwn"></script>
 </head>
 <body>
+
   <div id="map"></div>
 
   <script>
-    var map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.524123, 127.034567),  // 더채플엣청담 위치
+    var mapOptions = {
+      center: new naver.maps.LatLng(37.524123, 127.034567), // 더채플엣청담
       zoom: 16
-    });
+    };
+
+    var map = new naver.maps.Map('map', mapOptions);
 
     var marker = new naver.maps.Marker({
       position: new naver.maps.LatLng(37.524123, 127.034567),
       map: map,
-      title: "더채플엣청담"
+      title: '더채플엣청담'
     });
   </script>
+
 </body>
 </html>
+
