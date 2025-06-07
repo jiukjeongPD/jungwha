@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>간단한 지도 표시하기</title>
+    <title>더베일리하우스 삼성점</title>
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=8mlm4ew5xn"></script>
 </head>
 <body>
 <div id="map" style="width:100%;height:400px;"></div>
 
 <script>
-    var mapOptions = {
-        center: new naver.maps.LatLng(37.510672, 127.063246), // 더베일리하우스삼성
-        zoom: 16
-    };
+var mapOptions = {
+    center: new naver.maps.LatLng(37.510672, 127.063246),
+    zoom: 16
+};
 
-    var map = new naver.maps.Map('map', mapOptions);
-
-    var marker = new naver.maps.Marker({
+var map = new naver.maps.Map('map', mapOptions);
+var marker = new naver.maps.Marker({
         position: new naver.maps.LatLng(37.510672, 127.063246),
         map: map,
-        title: '더채플엣청담'
+        title: '더베일리하우스 삼성점'
     });
 </script>
 </body>
